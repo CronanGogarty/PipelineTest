@@ -3,4 +3,4 @@
 # PipelineTest
 An empty MVC project with some unit tests. This can be used to test the build and deploy pipelines in DevOps.
 Update readme to test sync between Github and DevOps.
-Trigger another
+DevOps remote.
