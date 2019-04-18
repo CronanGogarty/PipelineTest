@@ -50,5 +50,30 @@ namespace PipelineTest.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
         }
+
+        private int thisWillFail = 10;
+        private int thisWillSucceed = 9;
+
+        [TestMethod]
+        public void FailTest()
+        {
+
+            HomeController controller = new HomeController();
+
+            ViewResult result = controller.AddNumbers() as ViewResult;
+
+            Assert.AreEqual(thisWillFail, result.ViewBag.Result);
+        }
+
+        [TestMethod]
+        public void SucceedTest()
+        {
+
+            HomeController controller = new HomeController();
+
+            ViewResult result = controller.AddNumbers() as ViewResult;
+
+            Assert.AreEqual(thisWillSucceed, result.ViewBag.Result);
+        }
     }
 }

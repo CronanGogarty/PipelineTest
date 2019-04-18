@@ -26,5 +26,13 @@ namespace PipelineTest.Controllers
 
             return View();
         }
+
+        public ActionResult AddNumbers()
+        {
+            int result = 4 + 5;
+            ViewBag.Result = result;
+
+            return View("Home");
+        }
     }
 }
